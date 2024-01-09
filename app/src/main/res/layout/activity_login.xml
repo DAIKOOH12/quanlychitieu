@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:paddingHorizontal="5dp"
-            android:text="Email" />
+            android:text="Email"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edEmail"
@@ -37,7 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginBottom="10dp"
-            android:hint="Nhập Email" />
+            android:hint="Nhập Email"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"/>
 
         <TextView
             android:id="@+id/tvPassword"
@@ -45,14 +49,19 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:paddingHorizontal="5dp"
-            android:text="Mật khẩu" />
+            android:text="Mật khẩu"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:hint="Nhập mật khẩu" />
+            android:hint="Nhập mật khẩu"
+            android:password="true"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"/>
 
         <Button
             android:id="@+id/btnLogin"
@@ -61,7 +70,8 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="#3742FF"
-            android:text="Đăng nhập" />
+            android:text="Đăng nhập"
+            android:textColor="#fff"/>
 
         <TextView
             android:layout_width="match_parent"

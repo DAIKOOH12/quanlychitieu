@@ -7,45 +7,15 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#2B79FF"
-        android:padding="10dp"
-        android:gravity="left">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left">
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/moneywallet_foreground"/>
-            <TextView
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Ví của bạn"
-                android:textColor="#fff"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="1.000.000đ"
-            android:textAlignment="textEnd"
-            android:textColor="#fff"
-            android:layout_weight="2"
-            android:textSize="20dp"
-            android:gravity="center" />
-    </LinearLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="500dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_height="wrap_content"
         android:gravity="bottom">
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nvbar"
@@ -53,8 +23,8 @@
             android:layout_height="wrap_content"
             android:background="#2B79FF"
             app:menu="@menu/menu_bottom_navigation"
-            app:itemIconTint="#fff"
-            app:itemTextColor="#fff"
+            app:itemIconTint="@color/color_navigation"
+            app:itemTextColor="@color/color_navigation"
             app:labelVisibilityMode="labeled"/>
     </LinearLayout>
 </LinearLayout>
