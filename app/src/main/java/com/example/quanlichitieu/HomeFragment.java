@@ -1,5 +1,6 @@
 package com.example.quanlichitieu;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import com.example.quanlichitieu.databinding.FragmentHomeBinding;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +39,26 @@ public class HomeFragment extends Fragment {
         ArrayAdapter<CharSequence> adapterYear=ArrayAdapter.createFromResource(this.getActivity(),R.array.year, android.R.layout.simple_spinner_item);
         adapterYear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spinnerYear.setAdapter(adapterYear);
+        loadChart();
         return binding.getRoot();
+    }
+    public void loadChart(){
+        PieChart pieChart=binding.chart;
+        ArrayList<PieEntry> entries=new ArrayList<>();
+
+        entries.add(new PieEntry(60f,"Khoản thu"));
+        entries.add(new PieEntry(40f,"Khoản chi"));
+
+        PieDataSet pieDataSet=new PieDataSet(entries,"Các khoản chi tiêu");
+        pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+
+        pieDataSet.setValueTextColor(Color.WHITE);
+
+        PieData pieData=new PieData(pieDataSet);
+        pieChart.setData(pieData);
+
+        pieChart.getDescription().setEnabled(false);
+        pieChart.animateXY(2000,2000);
+        pieChart.invalidate();
     }
 }
