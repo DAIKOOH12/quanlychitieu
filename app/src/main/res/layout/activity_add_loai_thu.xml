@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLoaiThu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Thêm Loại Thu"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/btnCloseLoaiThu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/close_icon"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edLoaiThu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên loại thu"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnAddLoaiThu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_marginHorizontal="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:backgroundTint="#2948DD"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

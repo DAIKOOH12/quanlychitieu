@@ -1,15 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tài khoản"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:background="@drawable/bottom_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:background="@drawable/bottom_line">
+        <TextView
+            android:id="@+id/tvNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daikooh1234"
+            android:padding="5dp"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/tvEmailUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="daikooh1234@gmail.com"
+            android:textColor="#AAAAAA"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvChangePassWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THAY ĐỔI MẬT KHẨU"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textColor="#7671F4"
+        android:background="@drawable/bottom_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Đây là trang tài khoản"
-        android:gravity="center"/>
-
-</FrameLayout>
+        android:gravity="bottom|end"
+        android:background="#EFEFEF">
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/colorPrimaryDark"
+            android:elevation="15dp"/>
+    </RelativeLayout>
+</LinearLayout>

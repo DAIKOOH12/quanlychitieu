@@ -19,6 +19,7 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 /**
@@ -28,18 +29,29 @@ import java.util.ArrayList;
  */
 public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
+    private boolean isShown=false;
+    private long lTongTien=1000000;
+
+    //Định dạng lại kiểu số cho tổng tiền
+    NumberFormat numberFormat=NumberFormat.getNumberInstance();
+    String formattedNumber=numberFormat.format(lTongTien);
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding=FragmentHomeBinding.inflate(inflater,container,false);
+
+        //Gán giá trị cho spinner
         ArrayAdapter<CharSequence> adapterMonth=ArrayAdapter.createFromResource(this.getActivity(),R.array.month, android.R.layout.simple_spinner_item);
         adapterMonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spinnerMonth.setAdapter(adapterMonth);
         ArrayAdapter<CharSequence> adapterYear=ArrayAdapter.createFromResource(this.getActivity(),R.array.year, android.R.layout.simple_spinner_item);
         adapterYear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spinnerYear.setAdapter(adapterYear);
+
+        binding.tvTotalWallet.setText(formattedNumber+" đ");
         loadChart();
+        showMoney();
         return binding.getRoot();
     }
     public void loadChart(){
@@ -60,5 +72,22 @@ public class HomeFragment extends Fragment {
         pieChart.getDescription().setEnabled(false);
         pieChart.animateXY(2000,2000);
         pieChart.invalidate();
+    }
+    public void showMoney(){
+        binding.iconShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isShown==false){
+                    binding.tvTongTien.setText(formattedNumber+" đ");
+                    binding.iconShow.setImageResource(R.drawable.show_money);
+                    isShown=true;
+                }
+                else {
+                    binding.tvTongTien.setText("********");
+                    binding.iconShow.setImageResource(R.drawable.unsee_icon);
+                    isShown=false;
+                }
+            }
+        });
     }
 }

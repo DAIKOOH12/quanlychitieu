@@ -13,8 +13,21 @@
         android:theme="@style/Theme.Quanlichitieu"
         tools:targetApi="31">
         <activity
-            android:name=".Account"
-            android:exported="false" />
+            android:name=".AddLoaiThu"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+        <activity
+            android:name=".AddLoaiChi"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".AddKhoanThu"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".AddKhoanChi"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -26,7 +39,7 @@
         </activity>
         <activity
             android:name=".Login"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quản Lí Chi Tiêu</string>
+    <string name="app_name"></string>
     <string name="action_home">Tổng Quan</string>
     <string name="action_chi">Khoản Chi</string>
     <string name="action_thu">Khoản Thu</string>

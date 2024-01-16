@@ -1,5 +1,6 @@
 package com.example.quanlichitieu;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -51,6 +52,16 @@ public class LoaiThuFragment extends Fragment {
 
         CustomAdapterLoaiThu customAdapterLoaiThu=new CustomAdapterLoaiThu(this.getContext(),R.layout.row_items_thu,arrLoaiThu);
         binding.lvLoaiThu.setAdapter(customAdapterLoaiThu);
+        addLoaiThu();
         return binding.getRoot();
+    }
+    public void addLoaiThu(){
+        binding.iconAddLoaiThu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),AddLoaiThu.class);
+                startActivity(intent);
+            }
+        });
     }
 }
