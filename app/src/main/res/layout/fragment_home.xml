@@ -187,7 +187,8 @@
                         android:layout_height="wrap_content"
                         android:text="Tổng tiền tháng này"
                         android:textStyle="bold"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp"
+                        android:layout_marginBottom="20dp"/>
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/chart"
                         android:layout_width="300dp"

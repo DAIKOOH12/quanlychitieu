@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_loaichi"
+        android:icon="@drawable/baseline_add_circle_24"
+        android:title="@string/action_khoanchi" />
+    <item
+        android:id="@+id/action_khoanchi"
+        android:icon="@drawable/baseline_attach_money_24"
+        android:title="@string/action_loaichi" />
+</menu>

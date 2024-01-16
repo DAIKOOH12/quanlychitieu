@@ -4,6 +4,10 @@
     <string name="action_chi">Khoản Chi</string>
     <string name="action_thu">Khoản Thu</string>
     <string name="action_account">Tài Khoản</string>
+    <string name="action_khoanthu">Khoản Thu</string>
+    <string name="action_loaithu">Loại Thu</string>
+    <string name="action_khoanchi">Khoản Chi</string>
+    <string name="action_loaichi">Loại Chi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="month">
