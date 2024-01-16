@@ -26,6 +26,13 @@ public class Login extends AppCompatActivity {
         setContentView(view);
         setEvent();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     public void setEvent(){
         binding.edEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -55,6 +62,14 @@ public class Login extends AppCompatActivity {
                 Intent intent=new Intent(Login.this,MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        binding.tvSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,AddUser.class);
+                startActivity(intent);
             }
         });
     }

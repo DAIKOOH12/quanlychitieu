@@ -13,9 +13,15 @@
         android:theme="@style/Theme.Quanlichitieu"
         tools:targetApi="31">
         <activity
+            android:name=".AddUser"
+            android:exported="false" />
+        <activity
+            android:name=".ChangPassword"
+            android:exported="false" />
+        <activity
             android:name=".AddLoaiThu"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"/>
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
             android:name=".AddLoaiChi"
             android:exported="false"
@@ -30,6 +36,9 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +46,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Login"
-            android:exported="false" />
     </application>
 
 </manifest>

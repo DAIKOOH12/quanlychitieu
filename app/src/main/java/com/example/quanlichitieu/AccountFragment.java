@@ -25,6 +25,7 @@ public class AccountFragment extends Fragment {
         // Inflate the layout for this fragment
         binding=FragmentAccountBinding.inflate(getLayoutInflater());
         logOut();
+        changePassWord();
         return binding.getRoot();
     }
     public void logOut(){
@@ -42,6 +43,15 @@ public class AccountFragment extends Fragment {
                         getActivity().finish();
                     }
                 },100);
+            }
+        });
+    }
+    public void changePassWord(){
+        binding.tvChangePassWord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),ChangPassword.class);
+                startActivity(intent);
             }
         });
     }
